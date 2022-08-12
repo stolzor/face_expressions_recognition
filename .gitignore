@@ -1,4 +1,6 @@
-data/images
+data/images/
 env/
 .idea/
 models/before_train.pth
+models/__pycache__
+preproc_data/__pycache__
