@@ -1,0 +1,4 @@
+data/images
+env/
+.idea/
+models/before_train.pth
