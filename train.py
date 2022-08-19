@@ -114,13 +114,14 @@ def main():
         ax[0].plot(loss_history['train'], label="train_loss")
         ax[0].plot(loss_history['valid'], label="val_loss")
         ax[0].legend(loc='best')
-        ax[0].xlabel("epochs")
-        ax[0].ylabel("loss")
+        # ax[0].xlabel("epochs")
+        # ax[0].ylabel("loss")
+
         ax[1].plot(acc_history['train'], label="train_acc")
         ax[1].plot(acc_history['valid'], label="valid_acc")
         ax[1].legend(loc='best')
-        ax[1].xlabel("epochs")
-        ax[1].ylabel("accuracy")
+        # ax[1].xlabel("epochs")
+        # ax[1].ylabel("accuracy")
         plt.show()
         plt.close()
 

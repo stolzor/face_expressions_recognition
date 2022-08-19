@@ -42,7 +42,7 @@ class CustomDataset(Dataset):
 
 
 # Load train data with aug
-train_data = np.array(list(Path('data/').rglob('*.jpg')))
+train_data = np.array(list(Path('data/images/train/').rglob('*.jpg')))
 train_labels = np.array([train_data[i].parent.name for i in range(len(train_data))])
 
 # Load valid data without aug

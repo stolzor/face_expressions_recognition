@@ -2,27 +2,28 @@ from torchvision import models
 import torch
 import torch.nn as nn
 import torchsummary
-
+from pathlib import Path
 
 def init_model(mode):
-    regnet = models.regnet_y_3_2gf()
+    if Path('models/before_train.pth').is_file():
+        resnext = models.resnext50_32x4d()
+    else:
+        print('DOWNLOADED WEIGHT')
+        resnext = models.resnext50_32x4d(pretrained=True)
+        torch.save(resnext.state_dict(), './before_train.pth')
+    resnext = models.resnext50_32x4d()
 
-    regnet.stem = nn.Sequential(
-        nn.Conv2d(1, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False),
-        nn.BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True),
-        nn.ReLU(inplace=True)
-    )
-    regnet.fc = nn.Linear(in_features=1512, out_features=7, bias=True)
-
-    for i, param in enumerate(regnet.parameters()):
-        if i < 195:
+    for i, param in enumerate(resnext.parameters()):
+        if i < 90:
             param.requires_grad = False
+    resnext.conv1 = nn.Conv2d(1, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    resnext.fc = nn.Linear(in_features=2048, out_features=7, bias=True)
 
     if mode == 'pred':
-        regnet.load_state_dict(torch.load('models/after_train.pth'))
+        resnext.load_state_dict(torch.load('models/after_train_resnext.pth', map_location=torch.device('cpu')))
     else:
-        regnet.load_state_dict(torch.load('models/before_train.pth'))
-    return regnet
+        resnext.load_state_dict(torch.load('models/before_train.pth'))
+    return resnext
 
 if __name__ == '__main__':
     regnet = init_model('')
