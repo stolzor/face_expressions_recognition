@@ -22,6 +22,6 @@ def prepare_sample(img):
 
 def output(frame, model, decoder):
     preproc = prepare_sample(frame)
-    decoder.setInput(preproc)
+    model.setInput(preproc)
     out = model.forward()
     return decoder.inverse_transform([np.argmax(out, -1)])[0]

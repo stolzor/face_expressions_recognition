@@ -6,3 +6,4 @@ models/before_train.pth
 models/__pycache__
 preproc_data/__pycache__
 necessary_files/resnext.onnx
+necessary_files/__pycache__
