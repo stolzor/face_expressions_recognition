@@ -2,7 +2,7 @@ data/images/
 env/
 .idea/
 models/before_train.pth
-models/after_train_resnext.pth
+#models/after_train_resnext.pth
 models/__pycache__
 preproc_data/__pycache__
 necessary_files/resnext.onnx
