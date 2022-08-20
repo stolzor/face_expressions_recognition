@@ -2,6 +2,13 @@
 To solve the problem of Face Expressions Reference, I decided to divide it into two stages: 
 <br>1) Training the classifier on the available data<br>2) Face detection
 
+<h1>Installing packages</h1>
+In order for my project to work on your device, you need to install certain libraries.
+
+````
+pip install -r requirements.txt
+````
+
 <h1>Data</h1>
 I used a dataset from a Kaggle competition. If you want to repeat all my actions, then download this dataset <a href="https://www.kaggle.com/datasets/msambare/fer2013">here</a>. 
 Augmentation data is needed before training. Used augmentation, which is used in the CIFAR10 dataset. I made it so that you only need to run <code>train.py</code>.
