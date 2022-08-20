@@ -41,12 +41,11 @@ video_detect_class.py
 
 <h1>Example work. Before and After.</h1>
 
-
+<p float="left">
 <img src="example.png">
 
 <img src="res_example.png"> 
-
-
+</p>
 
 <h1>Conclusion</h1>
 This project was created for educational and practical purposes, I am ready to listen to your criticism and suggestions!
