@@ -39,12 +39,14 @@ To detect and classify an live video, use the script:
 video_detect_class.py
 ````
 
-<h1>Example work</h1>
+<h1>Example work. Before and After.</h1>
 
-<div style="display: flex;">
-<div style="flex: 0 1 50%;"><h3>Before</h3><img src="example.png"></div>
-<div style="flex: 0 1 50%;"><h3>After</h3><img src="res_example.png"></div>
-</div>
+
+<img src="example.png">
+
+<img src="res_example.png"> 
+
+
 
 <h1>Conclusion</h1>
 This project was created for educational and practical purposes, I am ready to listen to your criticism and suggestions!
