@@ -2,7 +2,9 @@ import pickle
 import cv2
 from cv2.dnn import readNetFromONNX
 from necessary_files.preproc_sample import *
+import warnings
 
+warnings.filterwarnings("ignore")
 
 if __name__ == '__main__':
     opencv_net = readNetFromONNX('necessary_files/resnext.onnx')

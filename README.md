@@ -22,14 +22,29 @@ Why did I decide to convert to ONNX format? After reading the article about ONNX
 To detect and classify an image, use the script: 
 
 ````
-image_detect_class.py
+python img_detect_class.py example1.png
 ````
+
+Or you want to detect and classify more than one image, then you need to enter the --image argument before the paths to the images:
+
+
+````
+python img_detect_class.py --images example1.png example2.jpg
+````
+
 
 To detect and classify an live video, use the script: 
 
 ````
 video_detect_class.py
 ````
+
+<h1>Example work</h1>
+
+<div style="display: flex;">
+<div style="flex: 0 1 50%;"><h3>Before</h3><img src="example.png"></div>
+<div style="flex: 0 1 50%;"><h3>After</h3><img src="res_example.png"></div>
+</div>
 
 <h1>Conclusion</h1>
 This project was created for educational and practical purposes, I am ready to listen to your criticism and suggestions!
