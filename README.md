@@ -54,5 +54,20 @@ video_detect_class.py
 <img src="res_example.png"> 
 </p>
 
+<h1>Docker</h1>
+You can pull my project from Docker and run. To pull it from Docker, type the following command:
+
+````
+docker pull stolzor/face_expressions_reference
+````
+
+And enter this to launch it:
+
+````
+docker run -d -p 8000:8000 stolzor/face_expressions_reference
+````
+
+After that, follow the link http://localhost:8000.
+
 <h1>Conclusion</h1>
 This project was created for educational and practical purposes, I am ready to listen to your criticism and suggestions!
